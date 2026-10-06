@@ -1,6 +1,8 @@
-# SQL Data Warehouse Project
+# SQL Data Analytics Project
 
-This project builds a small **SQL Server data warehouse** using customer, product, and sales data. It demonstrates how to create a database, organize tables into a schema, and load CSV files with `BULK INSERT`.
+This project builds a small **SQL Server data warehouse** from customer, product, and sales data, then uses SQL to analyze sales performance, customer behavior, and product performance. It covers loading CSV files with `BULK INSERT`, exploring the data, and building reusable reporting views.
+
+> **About this project:** Completed as my final project for **IS 3063 – Database Management for Information Systems** at the University of Texas at San Antonio (UTSA). The dataset was provided by my professor.
 
 ## Project Goal
 
@@ -11,6 +13,27 @@ Create a clean, structured Gold layer that can be queried for business analysis,
 - SQL Server
 - SQL Server Management Studio (SSMS)
 - GitHub
+
+## Skills Demonstrated
+
+- Database and schema creation, table design, and bulk data loading (`BULK INSERT`)
+- Joins across fact and dimension tables (star schema)
+- Aggregations with `GROUP BY` (`SUM`, `COUNT`, `AVG`)
+- Common Table Expressions (CTEs) and subqueries
+- Window functions: `RANK()`, `LAG()`, `SUM() OVER()`, `AVG() OVER()`
+- Conditional logic with `CASE` for customer and product segmentation
+- Date functions: `DATEDIFF()`, `DATETRUNC()`, `YEAR()`, `FORMAT()`
+- Building reporting views with KPIs (`CREATE VIEW`)
+
+## Key Findings
+
+- **$29.4M in total sales** across **27,659 orders** and **18,484 customers** (Dec 2010 – Jan 2014).
+- **Bikes drive the business:** Bikes account for **96.5%** of revenue. Accessories (2.4%) and Clothing (1.2%) contribute very little, which makes the company heavily dependent on one category.
+- **Top products are all one model:** the 5 highest-revenue products are all **Mountain-200** variants, each bringing in about $1.3M.
+- **Lowest performers are small add-ons**, such as Racing Socks and Patch Kits, each with under $10K in total sales.
+- **2013 was the strongest year:** sales reached **$16.3M** (up from $5.8M in 2012), and active customers jumped from about 3,300 to over 17,400. (2010 and 2014 contain only partial data.)
+- **Most customers are new:** 14,631 customers (79%) are **New** (less than 12 months of history), 2,198 are **Regular**, and 1,655 are **VIP** (12+ months and over $5,000 spent). Turning new buyers into repeat customers is the biggest growth opportunity.
+- **The United States is the largest market** with 7,482 customers, followed by Australia (3,591).
 
 ## Database Structure
 
