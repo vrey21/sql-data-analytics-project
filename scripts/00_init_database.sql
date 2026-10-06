@@ -105,7 +105,7 @@ TRUNCATE TABLE gold.fact_sales;
 GO
 
 BULK INSERT gold.fact_sales
-FROM FROM 'PASTE_FULL_PATH_TO_gold.fact_sales.csv_HERE'
+FROM 'PASTE_FULL_PATH_TO_gold.fact_sales.csv_HERE'
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
