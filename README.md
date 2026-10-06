@@ -35,6 +35,22 @@ Create a clean, structured Gold layer that can be queried for business analysis,
 - **Most customers are new:** 14,631 customers (79%) are **New** (less than 12 months of history), 2,198 are **Regular**, and 1,655 are **VIP** (12+ months and over $5,000 spent). Turning new buyers into repeat customers is the biggest growth opportunity.
 - **The United States is the largest market** with 7,482 customers, followed by Australia (3,591).
 
+## Screenshots
+
+**Category contribution to total sales** (`11_part_to_whole_analysis.sql`)
+
+![Part-to-whole analysis of sales by category](images/category_sales.jpg)
+
+**Product cost ranges and customer segments** (`10_data_segmentation.sql`)
+
+![Product cost ranges and customer segmentation results](images/customer_segmentation.jpg)
+
+**Customer KPI report** (`12_report_customers.sql`): top 10 customers by total sales from the `gold.report_customers` view
+
+![Customer KPI report table](images/report_customers_kpis.png)
+
+> `age` and `recency` are calculated with `GETDATE()`, so those values change depending on the date the query is run.
+
 ## Database Structure
 
 The project creates a database called `DataWarehouseAnalytics` and a schema called `gold`.
@@ -49,6 +65,10 @@ The project creates a database called `DataWarehouseAnalytics` and a schema call
 
 ```text
 sql-data-analytics-project/
+├── images/
+│   ├── category_sales.jpg
+│   ├── customer_segmentation.jpg
+│   └── report_customers_kpis.png
 ├── datasets/
 │   └── csv-files/
 │       ├── dim_customers.csv
